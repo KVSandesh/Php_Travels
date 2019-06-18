@@ -21,7 +21,7 @@ public class AHomePage_Object extends Waits {
 
 	@FindBy(xpath = "//span[text()='Search by Hotel or City Name']")
 	public WebElement Search_Hotel;
-	
+
 	@FindBy(xpath = "//div[@class='select2-drop select2-display-none select2-with-searchbox select2-drop-active']/div/input")
 	public WebElement Search_Hotel_2;
 
@@ -48,12 +48,12 @@ public class AHomePage_Object extends Waits {
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][2]/div[1]/table/tbody/tr/td[contains(text(),30) and @class='day ']")
 	public WebElement checkout_Date;
-	
-	@FindBy(xpath="//span[text()='Hotels    ']")
-	  public WebElement Hotel_Tab;
-	
-	@FindBy(xpath="//span[text()='Bangalore']")
-	 public WebElement Hotel_Name;
+
+	@FindBy(xpath = "//span[text()='Hotels    ']")
+	public WebElement Hotel_Tab;
+
+	@FindBy(xpath = "//span[text()='Bangalore']")
+	public WebElement Hotel_Name;
 
 	public void Sign_Up() throws Throwable {
 		// Thread.sleep(5000);
@@ -84,17 +84,24 @@ public class AHomePage_Object extends Waits {
 		Thread.sleep(6000);
 		Hotel_Name.click();
 		Thread.sleep(2000);
+		
 		checkin.click();
 		Thread.sleep(2000);
 		checkin_Date.click();
 		Thread.sleep(2000);
-		checkout.click();
-		Thread.sleep(2000);
+		
+		
+	//heckout.click();
+		Thread.sleep(1000);
 		checkout_Date.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+		
+		
 		Select_People_No.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		Select_Child.click();
+		Thread.sleep(3000);
+
 		Select_People_No.click();
 		Thread.sleep(1000);
 		Search_Button.click();

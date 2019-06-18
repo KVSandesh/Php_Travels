@@ -2,8 +2,6 @@ package com.PhpTravels.TestScripts;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -11,18 +9,19 @@ import org.testng.annotations.Test;
 import com.PhpTravels.Constants.Browsers;
 import com.PhpTravels.Constants.ExcelLibrary;
 import com.PhpTravels.pom.AHomePage_Object;
+import com.PhpTravels.pom.HotelsFilter_Object;
 import com.PhpTravels.pom.Login_Object;
 import com.PhpTravels.pom.MyAccount_Object;
 
 public class Hotel_TestCase {
-	
+
 	WebDriver driver;
-	
+
 	AHomePage_Object homepageobject;
-    Login_Object loginobject;
+	Login_Object loginobject;
 	MyAccount_Object myaccountobject;
-	
-	
+	HotelsFilter_Object hotelsfilterobject;
+
 	ExcelLibrary excelLibrary = new ExcelLibrary();
 
 	@BeforeClass
@@ -32,6 +31,7 @@ public class Hotel_TestCase {
 		homepageobject = PageFactory.initElements(driver, AHomePage_Object.class);
 		myaccountobject = PageFactory.initElements(driver, MyAccount_Object.class);
 		loginobject = PageFactory.initElements(driver, Login_Object.class);
+		hotelsfilterobject = PageFactory.initElements(driver, HotelsFilter_Object.class);
 	}
 
 	@Test
@@ -45,9 +45,8 @@ public class Hotel_TestCase {
 		String password = excelLibrary.getExceldata("Hotel_Data", 1, 0);
 
 		loginobject.login_1(username, password);
-		
-		homepageobject.Hotel();
-       
+        homepageobject.Hotel();
+		hotelsfilterobject.Hotel_Select();
 
 	}
 
@@ -56,6 +55,5 @@ public class Hotel_TestCase {
 		driver.close();
 
 	}
-	
 
 }
