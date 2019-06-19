@@ -4,15 +4,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CarsFilter_and_Confirm_Object {
+
+	@FindBy(xpath = "//table[@class='bgwhite table table-striped']/tbody/tr[1]/td[1]/div[1]")
+	public WebElement Select_Car;
+
+	@FindBy(xpath = "//button[text()='Book Now']")
+    public WebElement Book_Now_Button;
+
+	@FindBy(xpath = "//button[text()='CONFIRM THIS BOOKING']")
+	public WebElement COnfirm_Book_FLight;
 	
 	
-	@FindBy(xpath="//h4/a[@href='https://www.phptravels.net/cars/united-kingdom/manchester/Kia-Pacanto-2014?&pickupLocation=7&dropoffLocation=7&pickupDate=20/06/2019&pickupTime=00:00&dropoffDate=30/06/2019&dropoffTime=02:00']") 
-	
-	public WebElement Car_Select;
-	
-	
-	@FindBy(xpath="//button[text()='Book Now']")
-	
-	public WebElement Book_Now_Button;
+	public void Cars_Confirm() throws Throwable {
+		
+		Select_Car.click();
+		Thread.sleep(3000);
+		Book_Now_Button.click();
+		Thread.sleep(3000);
+		COnfirm_Book_FLight.click();
+		Thread.sleep(3000);
+	}
 
 }

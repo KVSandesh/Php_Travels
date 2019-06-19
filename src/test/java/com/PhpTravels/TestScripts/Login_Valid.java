@@ -43,10 +43,10 @@ public class Login_Valid {
 		String password = excelLibrary.getExceldata("Login_Positive", 1, 0);
 
 		loginobject.login_1(username, password);
-		
+
 		String loginnameValue = excelLibrary.getExceldata("Login_Positive", 4, 0);
-        String Actlogin = myaccountobject.verify_account.getText();
-        
+		String Actlogin = myaccountobject.verify_account.getText();
+
 		Thread.sleep(2000);
 
 		Assert.assertEquals(loginnameValue, Actlogin);

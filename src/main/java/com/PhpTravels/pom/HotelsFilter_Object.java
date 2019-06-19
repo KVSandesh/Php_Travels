@@ -1,10 +1,16 @@
 package com.PhpTravels.pom;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 public class HotelsFilter_Object {
+
+	WebDriver driver;
+
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@FindBy(xpath = "//input[@value='2 Adult 0 Child']")
 	public WebElement Select_People_No;
@@ -47,12 +53,12 @@ public class HotelsFilter_Object {
 
 	@FindBy(xpath = "	//*[@id='ROOMS']/div/button")
 	public WebElement Book_Button;
-	
-	
-	
+
 	@FindBy(xpath = "//button[text()='CONFIRM THIS BOOKING']")
 	public WebElement Confirm_Booking;
-	
+
+	@FindBy(xpath = "//div[text()='Available Rooms']")
+	public WebElement Scroll_Down_element;
 
 	// div[@class='datepicker
 	// dropdown-menu'][2]/div/table/tbody/tr/td[contains(text(),25)]
@@ -66,8 +72,17 @@ public class HotelsFilter_Object {
 		Select_Hotel_2.click();
 
 		Thread.sleep(5000);
+
+		//js.executeScript("arguments[0].scrollIntoView();", Scroll_Down_element);
+		
+		
+		//js.executeScript("window.scrollBy(0,250)", "");
+		
+		Thread.sleep(3000);
 		checkin.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+
+		Thread.sleep(3000);
 		checkin_Date.click();
 		Thread.sleep(2000);
 
@@ -77,11 +92,11 @@ public class HotelsFilter_Object {
 		Thread.sleep(5000);
 
 		Select dropdown = new Select(Select_Filer_Adult);
-		dropdown.selectByVisibleText("5");
+		dropdown.selectByVisibleText("2");
 		Thread.sleep(1000);
 
 		Select dropdown2 = new Select(Select_Filer_Child);
-		dropdown2.selectByVisibleText("5");
+		dropdown2.selectByVisibleText("1");
 		Thread.sleep(1000);
 		Modify_BUtton.click();
 
@@ -90,7 +105,7 @@ public class HotelsFilter_Object {
 
 		Thread.sleep(1000);
 		Book_Button.click();
-		
+
 		Thread.sleep(3000);
 		Confirm_Booking.click();
 

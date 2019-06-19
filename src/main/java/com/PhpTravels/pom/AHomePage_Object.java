@@ -1,11 +1,15 @@
 package com.PhpTravels.pom;
-
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.PhpTravels.Constants.Waits;
 
 public class AHomePage_Object extends Waits {
+	
+    
+
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav navbar-right hidden-sm go-left']/child::ul/child::li[1]")
 	public WebElement Add_account;
@@ -51,14 +55,21 @@ public class AHomePage_Object extends Waits {
 
 	@FindBy(xpath = "//span[text()='Hotels    ']")
 	public WebElement Hotel_Tab;
+	
+	@FindBy(xpath = "//span[text()='Flights   ']")
+	public WebElement Flight_Tab;
 
 	@FindBy(xpath = "//span[text()='Bangalore']")
 	public WebElement Hotel_Name;
+	
+	
+	@FindBy(xpath = "//ul[@class='select2-results']/li/ul/li[1]")
+	public WebElement Generic_Hotel_Name;
 
 	public void Sign_Up() throws Throwable {
-		// Thread.sleep(5000);
-		Got_Button.click();
-		Thread.sleep(1000);
+		
+		//Got_Button.click();
+		//Thread.sleep(1000);
 		Add_account.click();
 		Thread.sleep(1000);
 		Sign_Up_Button.click();
@@ -67,7 +78,7 @@ public class AHomePage_Object extends Waits {
 
 	public void Home_Login() throws Throwable {
 		// Thread.sleep(5000);
-		Got_Button.click();
+		//Got_Button.click();
 		Thread.sleep(1000);
 		Add_account.click();
 		Thread.sleep(1000);
@@ -80,9 +91,9 @@ public class AHomePage_Object extends Waits {
 		Thread.sleep(5000);
 		Search_Hotel.click();
 		Thread.sleep(1000);
-		Search_Hotel_2.sendKeys("Bangalore");
-		Thread.sleep(6000);
-		Hotel_Name.click();
+		Search_Hotel_2.sendKeys("star");
+		Thread.sleep(5000);
+		Generic_Hotel_Name.click();
 		Thread.sleep(2000);
 		
 		checkin.click();
