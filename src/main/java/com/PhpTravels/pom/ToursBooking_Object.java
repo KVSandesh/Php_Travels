@@ -68,17 +68,7 @@ public class ToursBooking_Object {
 		
 		Seach_button.click();
 
-		Select_CHild.click();
-		Thread.sleep(2000);
-		Select dropdown4 = new Select(Select_CHild);
-		dropdown4.selectByVisibleText("1");
-		Thread.sleep(2000);
-		Select_infants.click();
-		Thread.sleep(2000);
-		Select dropdown5 = new Select(Select_infants);
-		dropdown5.selectByVisibleText("1");
-		Thread.sleep(2000);
-		Tours_BookNow_Button.click();
+	
 
 	}
 

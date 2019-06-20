@@ -11,6 +11,9 @@ public class FlightBooking_Object {
 
 	@FindBy(id = "s2id_location_from")
 	public WebElement From_Flight;
+	
+	@FindBy(xpath = "//button[text()='Got it!']")
+	public WebElement Got_Button;
 
 	@FindBy(xpath = "//ul[@class='select2-results']/li")
 	public WebElement Select_from_List;
@@ -60,6 +63,9 @@ public class FlightBooking_Object {
 	
 	@FindBy(xpath = "//span[text()='Flights   ']")
 	public WebElement Flight_Tab;
+	
+	@FindBy(xpath="//table[@class='bgtable table table-striped flight-listing flights']/child::tbody/child::tr[1]/td/div[2]/p/button ") 
+	public WebElement Book_FLight;
 
 	public void Book_Flight() throws Throwable {
 		
@@ -113,6 +119,13 @@ public class FlightBooking_Object {
 		Thread.sleep(3000);
 		
 		Search_Button.click();
+		
+		Thread.sleep(6000);
+		
+		Got_Button.click();
+		Thread.sleep(1000);
+		
+		Book_FLight.click();
 		
 	}
 

@@ -51,7 +51,7 @@ public class HotelsFilter_Object {
 	@FindBy(xpath = "//tbody/tr[1]/td/div/div/div/div/div/label/div[1]")
 	public WebElement Hotel_Check;
 
-	@FindBy(xpath = "	//*[@id='ROOMS']/div/button")
+	@FindBy(xpath = "//*[@id='ROOMS']/div/button")
 	public WebElement Book_Button;
 
 	@FindBy(xpath = "//button[text()='CONFIRM THIS BOOKING']")
@@ -59,25 +59,25 @@ public class HotelsFilter_Object {
 
 	@FindBy(xpath = "//div[text()='Available Rooms']")
 	public WebElement Scroll_Down_element;
+	
+	@FindBy(xpath = "//button[text()='Got it!']")
+	public WebElement Got_Button;
+	
+	@FindBy(xpath = "//table[@class='bgwhite table table-striped']/tbody/tr[1]/td[1]/div[2]/div[2]/div/div[1]/button[1][text()='More Details']")
 
-	// div[@class='datepicker
-	// dropdown-menu'][2]/div/table/tbody/tr/td[contains(text(),25)]
-	// div[@class='datepicker
-	// dropdown-menu'][4]/div/table/tbody/tr[6]/td[contains(text(),30 )and
-	// @class='day active']
-	// div[@class='datepicker dropdown-menu'][1]/div[1]/table/tbody/tr[5]
+	public WebElement More_Details;
 
 	public void Hotel_Select() throws Throwable {
 
 		Select_Hotel_2.click();
 
-		Thread.sleep(5000);
-
+		Thread.sleep(2000);
+		Got_Button.click();
+		
 		//js.executeScript("arguments[0].scrollIntoView();", Scroll_Down_element);
-		
-		
 		//js.executeScript("window.scrollBy(0,250)", "");
 		
+
 		Thread.sleep(3000);
 		checkin.click();
 		Thread.sleep(3000);
@@ -87,9 +87,9 @@ public class HotelsFilter_Object {
 		Thread.sleep(2000);
 
 		checkout.click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		checkout_Date.click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 
 		Select dropdown = new Select(Select_Filer_Adult);
 		dropdown.selectByVisibleText("2");
@@ -99,8 +99,14 @@ public class HotelsFilter_Object {
 		dropdown2.selectByVisibleText("1");
 		Thread.sleep(1000);
 		Modify_BUtton.click();
+		Thread.sleep(3000);
+		
+	
+		/*More_Details.click();
+		Thread.sleep(2000);
+		More_Details.click();
 
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		Hotel_Check.click();
 
 		Thread.sleep(1000);
@@ -108,6 +114,6 @@ public class HotelsFilter_Object {
 
 		Thread.sleep(3000);
 		Confirm_Booking.click();
-
+*/
 	}
 }

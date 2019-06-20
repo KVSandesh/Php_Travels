@@ -1,6 +1,8 @@
 package com.PhpTravels.TestScripts;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -51,13 +53,19 @@ public class Flight_TestCase {
 
 		loginobject.login_1(username, password);
 		flight.Book_Flight();
+		Thread.sleep(3000);
+
+		Actions action = new Actions(driver);
+
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		
 		flightconfirm.Confirm_Flight();
 		
 		
 
 	}
 
-	@AfterClass(enabled = true)
+	@AfterClass(enabled = false)
 	public void close_Browser() {
 		driver.close();
 

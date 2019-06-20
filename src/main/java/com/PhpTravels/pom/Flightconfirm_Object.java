@@ -42,8 +42,8 @@ public class Flightconfirm_Object {
 	public WebElement COnfirm_Book_FLight;
 	
 	public void Confirm_Flight() throws Throwable {
-		Book_FLight.click();
-		Thread.sleep(5000);
+	/*	Book_FLight.click();
+		Thread.sleep(5000);*/
 		COnfirm_Book_FLight.click();
 		
 	}

@@ -1,6 +1,8 @@
 package com.PhpTravels.TestScripts;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -9,6 +11,8 @@ import org.testng.annotations.Test;
 import com.PhpTravels.Constants.Browsers;
 import com.PhpTravels.Constants.ExcelLibrary;
 import com.PhpTravels.pom.AHomePage_Object;
+import com.PhpTravels.pom.Hotel_Final_Booking_1;
+import com.PhpTravels.pom.Hotel_Final_Booking_2;
 import com.PhpTravels.pom.HotelsFilter_Object;
 import com.PhpTravels.pom.Login_Object;
 import com.PhpTravels.pom.MyAccount_Object;
@@ -21,6 +25,8 @@ public class Hotel_TestCase {
 	Login_Object loginobject;
 	MyAccount_Object myaccountobject;
 	HotelsFilter_Object hotelsfilterobject;
+	Hotel_Final_Booking_1 finalbook_1;
+	Hotel_Final_Booking_2 finalbook_2;
 
 	ExcelLibrary excelLibrary = new ExcelLibrary();
 
@@ -32,6 +38,8 @@ public class Hotel_TestCase {
 		myaccountobject = PageFactory.initElements(driver, MyAccount_Object.class);
 		loginobject = PageFactory.initElements(driver, Login_Object.class);
 		hotelsfilterobject = PageFactory.initElements(driver, HotelsFilter_Object.class);
+		finalbook_1 = PageFactory.initElements(driver, Hotel_Final_Booking_1.class);
+		finalbook_2  = PageFactory.initElements(driver, Hotel_Final_Booking_2.class);
 	}
 
 	@Test
@@ -45,12 +53,26 @@ public class Hotel_TestCase {
 		String password = excelLibrary.getExceldata("Hotel_Data", 1, 0);
 
 		loginobject.login_1(username, password);
-        homepageobject.Hotel();
+		homepageobject.Hotel();
 		hotelsfilterobject.Hotel_Select();
+		Thread.sleep(3000);
+
+		Actions action = new Actions(driver);
+
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		Thread.sleep(3000);
+		finalbook_1.confirm_hotel_booking_1();
+		Thread.sleep(3000);
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		
+		Thread.sleep(3000);
+		finalbook_2.confirm_hotel_booking_2();
+		Thread.sleep(3000);
 
 	}
 
-	@AfterClass(enabled = true)
+	@AfterClass(enabled = false)
 	public void close_Browser() {
 		driver.close();
 
