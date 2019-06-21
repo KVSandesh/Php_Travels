@@ -106,7 +106,7 @@ public class HotelsFilter_Object {
 
 		SoftAssert assertion = new SoftAssert();
 
-		Reporter.log("********Before Redefining*****");
+		
 
 		System.out.println("********Before Redefining****");
 

@@ -41,7 +41,7 @@ public class Flight_TestCase {
 		flightconfirm = PageFactory.initElements(driver, Flightconfirm_Object.class);
 	}
 
-	@Test
+	@Test(enabled=false)
 
 	public void FLight_Booking() throws Throwable {
 
@@ -52,6 +52,29 @@ public class Flight_TestCase {
 		String password = excelLibrary.getExceldata("Hotel_Data", 1, 0);
 
 		loginobject.login_1(username, password);
+		flight.Book_Flight();
+		Thread.sleep(3000);
+
+		Actions action = new Actions(driver);
+
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		
+		flightconfirm.Confirm_Flight();
+		
+		
+
+	}
+	
+	@Test(enabled=true)
+	public void FLight_Booking_Without_Login() throws Throwable {
+
+		homepageobject.Home_Login();
+		Thread.sleep(2000);
+
+		/*String username = excelLibrary.getExceldata("Hotel_Data", 0, 0);
+		String password = excelLibrary.getExceldata("Hotel_Data", 1, 0);
+
+		loginobject.login_1(username, password);*/
 		flight.Book_Flight();
 		Thread.sleep(3000);
 

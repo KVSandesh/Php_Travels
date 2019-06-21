@@ -1,81 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[********Before Redefining*****]]>
+      <![CDATA[FromPlace is True]]>
     </line>
     <line>
-      <![CDATA[THe checkin Date is Wrong Try to Redefine]]>
+      <![CDATA[Destination is True]]>
     </line>
     <line>
-      <![CDATA[THe checkout Date is Wrong Try to Redefine]]>
+      <![CDATA[Checkin Date is True]]>
     </line>
     <line>
-      <![CDATA[THe no of Adults is true]]>
+      <![CDATA[Checkout Date is true]]>
     </line>
     <line>
-      <![CDATA[THe no of chils is Wrong Try to Redefine]]>
+      <![CDATA[THe no of Adult is false]]>
     </line>
     <line>
-      <![CDATA[********Ater Redefining*****]]>
+      <![CDATA[THe no of child is false]]>
     </line>
     <line>
-      <![CDATA[ After Redefing, The checkin Date is True continue booking]]>
-    </line>
-    <line>
-      <![CDATA[After Redefing, The, THe checkout Date is true]]>
-    </line>
-    <line>
-      <![CDATA[After Redefing, The  no of Adults is true]]>
-    </line>
-    <line>
-      <![CDATA[After Redefing, The THe no of Child is true ]]>
+      <![CDATA[THe no of Infants is False]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="107245" started-at="2019-06-21T04:47:13Z" finished-at="2019-06-21T04:49:00Z">
+  <suite name="Default suite" duration-ms="82932" started-at="2019-06-21T10:06:00Z" finished-at="2019-06-21T10:07:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="107245" started-at="2019-06-21T04:47:13Z" finished-at="2019-06-21T04:49:00Z">
-      <class name="com.PhpTravels.TestScripts.Hotel_TestCase">
-        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.PhpTravels.TestScripts.Hotel_TestCase@49993335]" name="openBrowser" is-config="true" duration-ms="8223" started-at="2019-06-21T04:47:13Z" finished-at="2019-06-21T04:47:21Z">
+    <test name="Default test" duration-ms="82932" started-at="2019-06-21T10:06:00Z" finished-at="2019-06-21T10:07:23Z">
+      <class name="com.PhpTravels.TestScripts.Flight_TestCase">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.PhpTravels.TestScripts.Flight_TestCase@49993335]" name="openBrowser" is-config="true" duration-ms="8551" started-at="2019-06-21T10:06:00Z" finished-at="2019-06-21T10:06:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="Hotel_Booking()[pri:0, instance:com.PhpTravels.TestScripts.Hotel_TestCase@49993335]" name="Hotel_Booking" duration-ms="98985" started-at="2019-06-21T04:47:21Z" finished-at="2019-06-21T04:49:00Z">
+        <test-method status="PASS" signature="FLight_Booking_Without_Login()[pri:0, instance:com.PhpTravels.TestScripts.Flight_TestCase@49993335]" name="FLight_Booking_Without_Login" duration-ms="74119" started-at="2019-06-21T10:06:09Z" finished-at="2019-06-21T10:07:23Z">
           <reporter-output>
             <line>
-              <![CDATA[********Before Redefining*****]]>
+              <![CDATA[FromPlace is True]]>
             </line>
             <line>
-              <![CDATA[THe checkin Date is Wrong Try to Redefine]]>
+              <![CDATA[Destination is True]]>
             </line>
             <line>
-              <![CDATA[THe checkout Date is Wrong Try to Redefine]]>
+              <![CDATA[Checkin Date is True]]>
             </line>
             <line>
-              <![CDATA[THe no of Adults is true]]>
+              <![CDATA[Checkout Date is true]]>
             </line>
             <line>
-              <![CDATA[THe no of chils is Wrong Try to Redefine]]>
+              <![CDATA[THe no of Adult is false]]>
             </line>
             <line>
-              <![CDATA[********Ater Redefining*****]]>
+              <![CDATA[THe no of child is false]]>
             </line>
             <line>
-              <![CDATA[ After Redefing, The checkin Date is True continue booking]]>
-            </line>
-            <line>
-              <![CDATA[After Redefing, The, THe checkout Date is true]]>
-            </line>
-            <line>
-              <![CDATA[After Redefing, The  no of Adults is true]]>
-            </line>
-            <line>
-              <![CDATA[After Redefing, The THe no of Child is true ]]>
+              <![CDATA[THe no of Infants is False]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Hotel_Booking -->
-      </class> <!-- com.PhpTravels.TestScripts.Hotel_TestCase -->
+        </test-method> <!-- FLight_Booking_Without_Login -->
+        <test-method status="PASS" signature="close_Browser()[pri:0, instance:com.PhpTravels.TestScripts.Flight_TestCase@49993335]" name="close_Browser" is-config="true" duration-ms="219" started-at="2019-06-21T10:07:23Z" finished-at="2019-06-21T10:07:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_Browser -->
+      </class> <!-- com.PhpTravels.TestScripts.Flight_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
