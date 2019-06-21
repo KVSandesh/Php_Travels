@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
+import org.testng.asserts.SoftAssert;
 
 public class HotelsFilter_Object {
 
@@ -23,6 +25,15 @@ public class HotelsFilter_Object {
 
 	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div/div/input[@name='checkout']")
 	public WebElement checkout;
+
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div/div/input[@value='25/06/2019']")
+	public WebElement Verify_checkin_Date_1;
+
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div/div/input[@value='21/06/2019']")
+	public WebElement Verify_checkin_Date_2;
+
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[2]//input[@value='30/06/2019']")
+	public WebElement Verify_checkout_Date;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][2]/div/table/tbody/tr/td[contains(text(),25)]")
 	public WebElement checkin_Date;
@@ -59,13 +70,30 @@ public class HotelsFilter_Object {
 
 	@FindBy(xpath = "//div[text()='Available Rooms']")
 	public WebElement Scroll_Down_element;
-	
+
 	@FindBy(xpath = "//button[text()='Got it!']")
 	public WebElement Got_Button;
-	
+
 	@FindBy(xpath = "//table[@class='bgwhite table table-striped']/tbody/tr[1]/td[1]/div[2]/div[2]/div/div[1]/button[1][text()='More Details']")
 
 	public WebElement More_Details;
+
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[1]/div/input")
+	public WebElement Attribute_1;
+
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[2]/div/input")
+	public WebElement Attribute_2;
+
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[3]/div/select")
+	public WebElement Attribute_3;
+
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[4]/div/select")
+	public WebElement Attribute_4;
+
+	String Actual_1 = "25/06/2019";
+	String Actual_2 = "30/06/2019";
+	String Actual_3 = "2";
+	String Actual_4 = "1";
 
 	public void Hotel_Select() throws Throwable {
 
@@ -73,10 +101,34 @@ public class HotelsFilter_Object {
 
 		Thread.sleep(2000);
 		Got_Button.click();
-		
-		//js.executeScript("arguments[0].scrollIntoView();", Scroll_Down_element);
-		//js.executeScript("window.scrollBy(0,250)", "");
-		
+
+		Thread.sleep(3000);
+
+		SoftAssert assertion = new SoftAssert();
+
+		Reporter.log("********Before Redefining*****");
+
+		System.out.println("********Before Redefining****");
+
+		String expect_1 = Attribute_1.getAttribute("value");
+		System.out.println("Before  Redefing the Checkindate is ::" + expect_1);
+		assertion.assertNotEquals(Actual_1, expect_1);
+		Reporter.log("THe checkin Date is Wrong Try to Redefine", true);
+
+		String expect_2 = Attribute_2.getAttribute("value");
+		System.out.println("Checkinout is ::" + expect_2);
+		assertion.assertNotEquals(Actual_2, expect_2);
+		Reporter.log("THe checkout Date is Wrong Try to Redefine", true);
+
+		String expect_3 = Attribute_3.getAttribute("value");
+		System.out.println("THe no of Adults is ::" + expect_3);
+		assertion.assertNotEquals(Actual_3, expect_3);
+		Reporter.log("THe no of Adults is true", true);
+
+		String expect_4 = Attribute_4.getAttribute("value");
+		System.out.println("THe no of chils is ::" + expect_4);
+		assertion.assertNotEquals(Actual_4, expect_4);
+		Reporter.log("THe no of chils is Wrong Try to Redefine", true);
 
 		Thread.sleep(3000);
 		checkin.click();
@@ -97,23 +149,10 @@ public class HotelsFilter_Object {
 
 		Select dropdown2 = new Select(Select_Filer_Child);
 		dropdown2.selectByVisibleText("1");
-		Thread.sleep(1000);
+		Thread.sleep(3000);
+
 		Modify_BUtton.click();
 		Thread.sleep(3000);
-		
-	
-		/*More_Details.click();
-		Thread.sleep(2000);
-		More_Details.click();
 
-		Thread.sleep(3000);
-		Hotel_Check.click();
-
-		Thread.sleep(1000);
-		Book_Button.click();
-
-		Thread.sleep(3000);
-		Confirm_Booking.click();
-*/
 	}
 }

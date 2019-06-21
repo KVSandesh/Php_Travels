@@ -4,6 +4,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -38,8 +40,9 @@ public class Hotel_TestCase {
 		myaccountobject = PageFactory.initElements(driver, MyAccount_Object.class);
 		loginobject = PageFactory.initElements(driver, Login_Object.class);
 		hotelsfilterobject = PageFactory.initElements(driver, HotelsFilter_Object.class);
+
 		finalbook_1 = PageFactory.initElements(driver, Hotel_Final_Booking_1.class);
-		finalbook_2  = PageFactory.initElements(driver, Hotel_Final_Booking_2.class);
+		finalbook_2 = PageFactory.initElements(driver, Hotel_Final_Booking_2.class);
 	}
 
 	@Test
@@ -55,18 +58,25 @@ public class Hotel_TestCase {
 		loginobject.login_1(username, password);
 		homepageobject.Hotel();
 		hotelsfilterobject.Hotel_Select();
+
 		Thread.sleep(3000);
 
 		Actions action = new Actions(driver);
 
 		action.sendKeys(Keys.PAGE_DOWN).perform();
 		action.sendKeys(Keys.PAGE_DOWN).perform();
+
+		/*Assert.assertEquals(hotelsfilterobject.Verify_checkin_Date_1, hotelsfilterobject.Verify_checkin_Date_2);
+		Reporter.log("Checkind date is wrong try to modify", true);
+		
 		Thread.sleep(3000);
+*/
 		finalbook_1.confirm_hotel_booking_1();
 		Thread.sleep(3000);
 		action.sendKeys(Keys.PAGE_DOWN).perform();
-		
 		Thread.sleep(3000);
+		
+		
 		finalbook_2.confirm_hotel_booking_2();
 		Thread.sleep(3000);
 
