@@ -43,14 +43,17 @@ public class Login_Invalid {
 		String password = excelLibrary.getExceldata("Login_Negative", 1, 0);
 
 		loginobject.login_1(username, password);
+		Reporter.log("Login Unsuccessful, Cross Verify the credentials", true);
 
 		Thread.sleep(2000);
 
-		homepageobject.Hotel();
+		homepageobject.verify_account_Login.click();
+		Thread.sleep(2000);
+	
 
 	}
 
-	@AfterClass(enabled = false)
+	@AfterClass(enabled = true)
 	public void close_Browser() {
 		driver.close();
 

@@ -16,6 +16,8 @@ public class Hotel_Final_Booking_2  {
 	public void confirm_hotel_booking_2() throws Throwable {
 		
        Confirm_Booking.click();
+       
+       Thread.sleep(4000);
 	}
 
 }

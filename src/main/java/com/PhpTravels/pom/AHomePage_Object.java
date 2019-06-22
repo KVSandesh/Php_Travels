@@ -20,6 +20,12 @@ public class AHomePage_Object extends Waits {
 
 	@FindBy(xpath = "//li[@class='open']/ul/li//a[@href='https://www.phptravels.net/login']")
 	public WebElement Home_Login_Buton;
+	
+	@FindBy(xpath="//*[@id='body-section']/div[2]/div[2]/div/div[1]/ul/li[2]/a")
+	public WebElement verify_account_Login;
+	
+	@FindBy(xpath="//span[text()='Hotels    ']")
+	  public WebElement Hotel;
 
 	@FindBy(xpath = "//span[text()='Search by Hotel or City Name']")
 	public WebElement Search_Hotel;
@@ -45,7 +51,7 @@ public class AHomePage_Object extends Waits {
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][1]/div[1]/table/thead/tr[1]/th[2]")
 	public WebElement Month;
 
-	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][1]/div[1]/table/tbody/tr/td[contains(text(),25)]")
+	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][1]/div[1]/table/tbody/tr[5]/td[contains(text(),28)]")
 	public WebElement checkin_Date;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][2]/div[1]/table/tbody/tr/td[contains(text(),30) and @class='day ']")

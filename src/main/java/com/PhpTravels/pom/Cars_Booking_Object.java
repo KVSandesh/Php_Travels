@@ -18,7 +18,7 @@ public class Cars_Booking_Object {
 	@FindBy(id = "s2id_carlocations2")
 	public WebElement carTo;
 
-	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][4]/div[1]/table/tbody/tr/td[contains(text(),25)]")
+	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][4]/div[1]/table/tbody/tr[5]/td[contains(text(),28)]")
 	public WebElement checkin_Date;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][5]/div[1]/table/tbody/tr/td[contains(text(),30) and @class='day ']")

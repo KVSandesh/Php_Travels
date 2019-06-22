@@ -8,11 +8,169 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">82,932</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num attn">7</td><td class="num">779,553</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.PhpTravels.TestScripts.Flight_TestCase</td><td><a href="#m0">FLight_Booking_Without_Login</a></td><td rowspan="1">1561111569250</td><td rowspan="1">74119</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.PhpTravels.TestScripts.Cars_TestCase</td><td><a href="#m0">Car_Booking</a></td><td rowspan="1">1561184352100</td><td rowspan="1">78978</td></tr><tr class="failedodd"><td rowspan="1">com.PhpTravels.TestScripts.Cars_TestCase_WO_Login</td><td><a href="#m1">Car_Booking_Without_Login</a></td><td rowspan="1">1561184439587</td><td rowspan="1">75391</td></tr><tr class="failedeven"><td rowspan="1">com.PhpTravels.TestScripts.Flight_TestCase</td><td><a href="#m2">FLight_Booking</a></td><td rowspan="1">1561184007340</td><td rowspan="1">99775</td></tr><tr class="failedodd"><td rowspan="1">com.PhpTravels.TestScripts.Flight_TestCase_WO_Login</td><td><a href="#m3">FLight_Booking_Without_Login</a></td><td rowspan="1">1561184113349</td><td rowspan="1">76304</td></tr><tr class="failedeven"><td rowspan="1">com.PhpTravels.TestScripts.Login_Invalid</td><td><a href="#m4">SignUp</a></td><td rowspan="1">1561183851285</td><td rowspan="1">22651</td></tr><tr class="failedodd"><td rowspan="1">com.PhpTravels.TestScripts.SIgn_Up_Negative</td><td><a href="#m5">SignUp</a></td><td rowspan="1">1561183794520</td><td rowspan="1">23250</td></tr><tr class="failedeven"><td rowspan="1">com.PhpTravels.TestScripts.Tours_TestCase_WO_Login</td><td><a href="#m6">Tours_Booking_Without_Login</a></td><td rowspan="1">1561184288272</td><td rowspan="1">55746</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.PhpTravels.TestScripts.Hotel_TestCase</td><td><a href="#m7">Hotel_Booking</a></td><td rowspan="1">1561183882119</td><td rowspan="1">117773</td></tr><tr class="passedodd"><td rowspan="1">com.PhpTravels.TestScripts.Login_Valid</td><td><a href="#m8">Login</a></td><td rowspan="1">1561183827772</td><td rowspan="1">14662</td></tr><tr class="passedeven"><td rowspan="1">com.PhpTravels.TestScripts.Sign_Up_Positive</td><td><a href="#m9">SignUp</a></td><td rowspan="1">1561183742903</td><td rowspan="1">44873</td></tr><tr class="passedodd"><td rowspan="1">com.PhpTravels.TestScripts.Tours_TestCase</td><td><a href="#m10">Tours_Booking</a></td><td rowspan="1">1561184196881</td><td rowspan="1">80870</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.PhpTravels.TestScripts.Flight_TestCase#FLight_Booking_Without_Login</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">FromPlace is True<br/>Destination is True<br/>Checkin Date is True<br/>Checkout Date is true<br/>THe no of Adult is false<br/>THe no of child is false<br/>THe no of Infants is False</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.PhpTravels.TestScripts.Cars_TestCase#Car_Booking</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">FromPlace is True<br/>Destination is True<br/>Checkin Date is True<br/>Checkout Date is true<br/>PickUP TIme is true<br/>Dropoff time is true</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;button type=&quot;submit&quot; class=&quot;btn btn-success btn-lg btn-block completebook&quot; name=&quot;logged&quot; onclick=&quot;return completebook(&apos;https://www.phptravels.net/&apos;,&apos;Select Payment Method&apos;);&quot;&gt;...&lt;/button&gt; is not clickable at point (590, 685). Other element would receive the click: &lt;span id=&quot;cookieconsent:desc&quot; class=&quot;cc-message&quot;&gt;...&lt;/span&gt;
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;PAPERBOY&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\DOORS\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54856}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 3438f5b2e9463109d68d8017a4f9d213
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.PhpTravels.pom.Cars_Confirm_Object_2.Cars_Confirm(Cars_Confirm_Object_2.java:25)
+	at com.PhpTravels.TestScripts.Cars_TestCase.Car_Booking(Cars_TestCase.java:71)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.PhpTravels.TestScripts.Cars_TestCase_WO_Login#Car_Booking_Without_Login</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">FromPlace is True<br/>Destination is True<br/>Checkin Date is True<br/>Checkout Date is true<br/>PickUP TIme is true<br/>Dropoff time is true</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Pay on Arrival&apos;]&quot;}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;PAPERBOY&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\DOORS\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54904}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: a74e700b498f4e3e053f062fcc846581
+*** Element info: {Using=xpath, value=//button[text()=&apos;Pay on Arrival&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.PhpTravels.TestScripts.Cars_TestCase_WO_Login.Car_Booking_Without_Login(Cars_TestCase_WO_Login.java:67)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.PhpTravels.TestScripts.Flight_TestCase#FLight_Booking</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">FromPlace is True<br/>Destination is True<br/>Checkin Date is True<br/>Checkout Date is true<br/>THe no of Adult is false<br/>THe no of child is false<br/>THe no of Infants is False</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;button type=&quot;submit&quot; class=&quot;btn btn-success btn-lg btn-block completebook&quot; name=&quot;logged&quot; onclick=&quot;return completebook(&apos;https://www.phptravels.net/&apos;,&apos;Select Payment Method&apos;);&quot;&gt;...&lt;/button&gt; is not clickable at point (590, 685). Other element would receive the click: &lt;span id=&quot;cookieconsent:desc&quot; class=&quot;cc-message&quot;&gt;...&lt;/span&gt;
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;PAPERBOY&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\DOORS\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54694}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 5b767c20ce18175bd77771880008a0a0
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.PhpTravels.pom.Flightconfirm_Object.Confirm_Flight(Flightconfirm_Object.java:152)
+	at com.PhpTravels.TestScripts.Flight_TestCase.FLight_Booking(Flight_TestCase.java:61)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.PhpTravels.TestScripts.Flight_TestCase_WO_Login#FLight_Booking_Without_Login</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">FromPlace is True<br/>Destination is True<br/>Checkin Date is True<br/>Checkout Date is true<br/>THe no of Adult is false<br/>THe no of child is false<br/>THe no of Infants is False</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;button type=&quot;submit&quot; class=&quot;btn btn-success btn-lg btn-block completebook&quot; name=&quot;guest&quot; onclick=&quot;return completebook(&apos;https://www.phptravels.net/&apos;,&apos;Select Payment Method&apos;);&quot;&gt;...&lt;/button&gt; is not clickable at point (590, 685). Other element would receive the click: &lt;span id=&quot;cookieconsent:desc&quot; class=&quot;cc-message&quot;&gt;...&lt;/span&gt;
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;PAPERBOY&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\DOORS\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54724}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 179f482cadc46254d71158a24045d5d1
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.PhpTravels.pom.Flightconfirm_Object.Confirm_Flight(Flightconfirm_Object.java:152)
+	at com.PhpTravels.TestScripts.Flight_TestCase_WO_Login.FLight_Booking_Without_Login(Flight_TestCase_WO_Login.java:53)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.PhpTravels.TestScripts.Login_Invalid#SignUp</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Login Unsuccessful, Cross Verify the credentials</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;body-section&apos;]/div[2]/div[2]/div/div[1]/ul/li[2]/a&quot;}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;PAPERBOY&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\DOORS\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54626}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 42ca64257fac1d6a6b9074a323008612
+*** Element info: {Using=xpath, value=//*[@id=&apos;body-section&apos;]/div[2]/div[2]/div/div[1]/ul/li[2]/a}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.PhpTravels.TestScripts.Login_Invalid.SignUp(Login_Invalid.java:50)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.PhpTravels.TestScripts.SIgn_Up_Negative#SignUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [] but found [SIGN UP]
+	at com.PhpTravels.TestScripts.SIgn_Up_Negative.SignUp(SIgn_Up_Negative.java:54)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.PhpTravels.TestScripts.Tours_TestCase_WO_Login#Tours_Booking_Without_Login</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Selected Date is True </div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;button type=&quot;submit&quot; class=&quot;btn btn-success btn-lg btn-block completebook&quot; name=&quot;guest&quot; onclick=&quot;return completebook(&apos;https://www.phptravels.net/&apos;,&apos;Select Payment Method&apos;);&quot;&gt;...&lt;/button&gt; is not clickable at point (590, 676). Other element would receive the click: &lt;span id=&quot;cookieconsent:desc&quot; class=&quot;cc-message&quot;&gt;...&lt;/span&gt;
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;PAPERBOY&apos;, ip: &apos;192.168.1.112&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\DOORS\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54819}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 8e63f6dc141b85392d705e459ac0fd04
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.PhpTravels.pom.Tours_Confirm_2.Tours_Confirm_22(Tours_Confirm_2.java:18)
+	at com.PhpTravels.TestScripts.Tours_TestCase_WO_Login.Tours_Booking_Without_Login(Tours_TestCase_WO_Login.java:59)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.PhpTravels.TestScripts.Hotel_TestCase#Hotel_Booking</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">THe checkin Date is Wrong Try to Redefine<br/>THe checkout Date is Wrong Try to Redefine<br/>THe no of Adults is true<br/>THe no of chils is Wrong Try to Redefine<br/> After Redefing, The checkin Date is True continue booking<br/>After Redefing, The, THe checkout Date is true<br/>After Redefing, The  no of Adults is true<br/>After Redefing, The THe no of Child is true </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.PhpTravels.TestScripts.Login_Valid#Login</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Login Successfull</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.PhpTravels.TestScripts.Sign_Up_Positive#SignUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.PhpTravels.TestScripts.Tours_TestCase#Tours_Booking</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Selected Date is True </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

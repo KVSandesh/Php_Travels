@@ -20,7 +20,7 @@ public class ToursBooking_Object {
 	@FindBy(xpath = "//input[@placeholder='Check in' and @name='date']")
 	public WebElement checkin;
 
-	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][3]/div[1]/table/tbody/tr/td[contains(text(),25)]")
+	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][3]/div[1]/table/tbody/tr[5]/td[contains(text(),28)]")
 	public WebElement PickDate;
 
 	@FindBy(id = "adults")

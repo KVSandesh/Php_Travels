@@ -16,6 +16,8 @@ public class Browsers {
 		images.put("images", 2);
 		HashMap<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("profile.default_content_setting_values", images);
+
+		//prefs.put("profile.default_content_setting_values.notifications", 2);
 		ops.setExperimentalOption("prefs", prefs);
 
 	}
@@ -34,7 +36,7 @@ public class Browsers {
 			disableimage(ops);
 			ops.addArguments("--disable-notifications"); /* To disable the Notifications */
 			driver = new ChromeDriver(ops);
-			//WebDriver driver = new ChromeDriver(ops);
+			// WebDriver driver = new ChromeDriver(ops);
 
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.manage().window().maximize();

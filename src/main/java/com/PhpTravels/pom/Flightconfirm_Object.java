@@ -57,7 +57,7 @@ public class Flightconfirm_Object {
 	@FindBy(xpath = "//body[@style='overflow: visible;']/div[5]/div[4]/div/div[3]/div/table/tbody/tr[1]/td/div/div/div[2]/p/strong/span[2]")
 	public WebElement Attribute_2;
 
-	@FindBy(xpath = "//body[@style='overflow: visible;']/div[5]/div[4]/div/div[3]/div/table/tbody/tr[1]/td/div/div/div[3]/p/small/strong")
+	@FindBy(xpath = "//body[@style='overflow: visible;']/div[5]/div[4]/div/div[3]/div/table/tbody/tr[1]/td/div/div[1]/div[3]/p/small/strong")
 	public WebElement Attribute_3;
 	@FindBy(xpath = "//body[@style='overflow: visible;']/div[5]/div[4]/div/div[3]/div/table/tbody/tr[2]/td/div[1]/div[3]/div[3]/p/small/strong")
 	public WebElement Attribute_4;
@@ -67,11 +67,15 @@ public class Flightconfirm_Object {
 	public WebElement Attribute_6;
 	@FindBy(xpath = "//select[@name='minfant']/option[1]")
 	public WebElement Attribute_7;
-
+	
+	@FindBy(xpath = "//button[text()='Pay on Arrival']")
+	public WebElement Invoice;
+	
+	
 	String Actual_1 = "BLR";
 	String Actual_2 = "BLR";
-	String Actual_3 = "2019-06-25";
-	String Actual_4 = "2019-06-25";
+	String Actual_3 = "2019-06-28";
+	String Actual_4 = "2019-06-30";
 	String Actual_5 = "2";
 	String Actual_6 = "1";
 	String Actual_7 = "1";
@@ -139,14 +143,20 @@ public class Flightconfirm_Object {
 		Thread.sleep(1000);
 
 		Book_FLight.click();
+		Thread.sleep(3000);
+		
+		
+	/*	Got_Button.click();
+		Thread.sleep(2000);*/
 
 		COnfirm_Book_FLight.click();
+		
+		
+		Thread.sleep(4000);
+       
 
 	}
 
 }
-/*
- * @FindBy(xpath="") public WebElement ;
- * 
- * @FindBy(id = "telugu") public WebElement
- */
+
+

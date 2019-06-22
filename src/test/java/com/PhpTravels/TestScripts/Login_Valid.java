@@ -57,7 +57,7 @@ public class Login_Valid {
 
 	}
 
-	@AfterClass(enabled = false)
+	@AfterClass(enabled = true)
 	public void close_Browser() {
 		driver.close();
 

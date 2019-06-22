@@ -15,7 +15,7 @@ public class Hotel_Final_Booking_1 extends Waits {
 
 	WebDriver driver;
 
-	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][2]/div/table/tbody/tr/td[contains(text(),25)]")
+	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][2]/div/table/tbody/tr/td[contains(text(),28)]")
 	public WebElement checkin_Date;
 
 	@FindBy(xpath = "//div[@class='datepicker dropdown-menu'][4]/div/table/tbody/tr[6]/td[contains(text(), 30)]")
@@ -39,13 +39,13 @@ public class Hotel_Final_Booking_1 extends Waits {
 	@FindBy(xpath = "//table[@class='bgwhite table table-striped']/tbody/tr[1]/td[1]/div[2]/div[2]/div/div[1]/button[1][text()='More Details']")
 	public WebElement More_Details;
 
-	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div/div/input[@value='25/06/2019']")
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div/div/input[@value='28/06/2019']")
 	public WebElement Verify_checkin_Date;
 
 	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[2]//input[@value='30/06/2019']")
 	public WebElement Verify_checkout_Date;
 
-	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div/div/input[@value='25/06/2019']")
+	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div/div/input[@value='28/06/2019']")
 	public WebElement Verify_checkin_Date_1;
 
 	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[1]/div/input")
@@ -60,7 +60,7 @@ public class Hotel_Final_Booking_1 extends Waits {
 	@FindBy(xpath = "//div[@class='container mob-row']/div/div/div/form/div[4]/div/select")
 	public WebElement Attribute_4;
 
-	String Actual_1 = "25/06/2019";
+	String Actual_1 = "28/06/2019";
 	String Actual_2 = "30/06/2019";
 	String Actual_3 = "2";
 	String Actual_4 = "1";

@@ -29,6 +29,9 @@ public class SignUp_Object extends AHomePage_Object{
 	@FindBy(xpath = "//div[text()=' Email Already Exists. ']")
 	public WebElement Verify_Login;
 	
+	@FindBy(xpath="//span[text()='Hotels    ']")
+	  public WebElement Hotel;
+	
 	
 	
 	public void SignUp_PhpTravels(String FirstName, String LastName,  String MobileNumber, String Email, String Password, String ConfirmPassword) throws Throwable 

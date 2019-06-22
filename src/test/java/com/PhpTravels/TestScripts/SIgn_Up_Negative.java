@@ -54,8 +54,13 @@ public class SIgn_Up_Negative {
 		Assert.assertEquals(Actlogin, loginnameValue);
 		System.out.println("\n\n");
 		System.out.println("*********************************");
-		Reporter.log("Email Id already Exist, Cross Verify", true);
+		Reporter.log("Email Id already Exist, Cross Verify the credentials", true);
 		System.out.println("*********************************");
+		Thread.sleep(3000);
+		
+		homepageobject.verify_account_Login.click();
+		Thread.sleep(2000);
+		
 	}
 
 	@AfterClass(enabled=true)

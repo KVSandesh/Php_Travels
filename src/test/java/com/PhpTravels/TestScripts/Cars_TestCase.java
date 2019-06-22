@@ -74,7 +74,32 @@ public class Cars_TestCase {
 
 	}
 
-	@AfterClass(enabled = false)
+	
+	public void Car_Booking_Without_Login() throws Throwable {
+
+	
+		carsbooking.Cars_Booking();
+
+		carsfilter.Cars_Filter();
+
+		Thread.sleep(3000);
+
+		Actions action = new Actions(driver);
+
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		Thread.sleep(2000);
+		carsconfirm.Cars_Confirm();
+
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		carsconfirm2.Cars_Confirm();
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		Thread.sleep(2000);
+
+	}
+	
+	
+	@AfterClass(enabled = true)
 	public void close_Browser() {
 		driver.close();
 	}

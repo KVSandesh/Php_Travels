@@ -20,21 +20,20 @@ public class Tours_Confirm_1 {
 	@FindBy(xpath = "//button[text()='Book Now']")
 	public WebElement Tours_BookNow_Button;
 	
-	@FindBy(xpath = "//div[@class='datepicker dropdown-menu']/div/table/tbody/tr[5]/td[3][contains(text(),'25')]")
-	public WebElement Select_Date;
+	/*@FindBy(xpath = "//div[@class='datepicker dropdown-menu']/div/table/tbody/tr[5]/td[3][contains(text(),'25')]")
+	public WebElement Select_Date;*/
 	
 	
 	@FindBy(xpath = "//div[@class='container mob-row'][2]/div[2]/div[2]/div/div/form/div/div[2]/input")
 	public WebElement Attribute;
 	
-	String Actual= "25/06/2019";
+	String Actual= "28/06/2019";
 
 	public void Tours_Confirm() throws Throwable {
 
 		Thread.sleep(3000);
-		Got_Button.click();
-		Thread.sleep(3000);
-		
+		//Got_Button.click();
+	 
 		SoftAssert assertion = new SoftAssert();
 
 		System.out.println("\n");

@@ -39,7 +39,7 @@ public class Tours_TestCase {
 		toursconfirm2=PageFactory.initElements(driver, Tours_Confirm_2.class);
 	}
 
-	@Test
+	@Test(enabled = true)
 
 	public void Tours_Booking() throws Throwable {
 
@@ -70,7 +70,8 @@ public class Tours_TestCase {
 
 	}
 
-	@AfterClass(enabled = false)
+
+	@AfterClass(enabled = true)
 	public void close_Browser() {
 		driver.close();
 	}

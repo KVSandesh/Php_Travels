@@ -66,23 +66,24 @@ public class Hotel_TestCase {
 		action.sendKeys(Keys.PAGE_DOWN).perform();
 		action.sendKeys(Keys.PAGE_DOWN).perform();
 
-		/*Assert.assertEquals(hotelsfilterobject.Verify_checkin_Date_1, hotelsfilterobject.Verify_checkin_Date_2);
-		Reporter.log("Checkind date is wrong try to modify", true);
-		
-		Thread.sleep(3000);
-*/
+		/*
+		 * Assert.assertEquals(hotelsfilterobject.Verify_checkin_Date_1,
+		 * hotelsfilterobject.Verify_checkin_Date_2);
+		 * Reporter.log("Checkind date is wrong try to modify", true);
+		 * 
+		 * Thread.sleep(3000);
+		 */
 		finalbook_1.confirm_hotel_booking_1();
 		Thread.sleep(3000);
 		action.sendKeys(Keys.PAGE_DOWN).perform();
 		Thread.sleep(3000);
-		
-		
+
 		finalbook_2.confirm_hotel_booking_2();
 		Thread.sleep(3000);
 
 	}
 
-	@AfterClass(enabled = false)
+	@AfterClass(enabled = true)
 	public void close_Browser() {
 		driver.close();
 
