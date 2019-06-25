@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PhpTravels.TestScripts.Flight_TestCase">
+      <class name="com.PhpTravels.TestScripts.Hotel_TestCase_Date_Invalid">
         <methods>
-          <include name="close_Browser"/>
-          <include name="FLight_Booking"/>
+          <include name="Hotel_Booking"/>
           <include name="openBrowser"/>
-          <include name="FLight_Booking_Without_Login"/>
+          <include name="close_Browser"/>
         </methods>
-      </class> <!-- com.PhpTravels.TestScripts.Flight_TestCase -->
+      </class> <!-- com.PhpTravels.TestScripts.Hotel_TestCase_Date_Invalid -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

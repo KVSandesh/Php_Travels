@@ -37,7 +37,7 @@ public class SignUp_Object extends AHomePage_Object{
 	public void SignUp_PhpTravels(String FirstName, String LastName,  String MobileNumber, String Email, String Password, String ConfirmPassword) throws Throwable 
 	{
 		
-	    Thread.sleep(3000);
+	    Thread.sleep(1000);
 		firstname.sendKeys(FirstName);
 		Thread.sleep(1000);
 		lastname.sendKeys(LastName);
@@ -49,7 +49,7 @@ public class SignUp_Object extends AHomePage_Object{
 		password.sendKeys(Password);
 		Thread.sleep(1000);
 		confirmpassword.sendKeys(ConfirmPassword);
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		SignUp.click();
 		
 	}

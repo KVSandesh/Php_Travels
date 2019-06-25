@@ -43,6 +43,10 @@ public class Sign_Up_Positive {
 
 		signupobject.SignUp_PhpTravels(FirstName, LastName, MobileNumber, Email, Password, ConfirmPassword);
 		Thread.sleep(3000);
+		
+		homepageobject.verify_account_Login.click();
+		Thread.sleep(2000);
+		
 
 	}
 

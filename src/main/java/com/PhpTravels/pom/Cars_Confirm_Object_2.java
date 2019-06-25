@@ -12,23 +12,19 @@ public class Cars_Confirm_Object_2 {
 
 	@FindBy(xpath = "//button[text()='Got it!']")
 	public WebElement Got_Button;
-	
+
 	@FindBy(xpath = "//button[text()='Pay on Arrival']")
 	public WebElement Invoice;
 
-
 	public void Cars_Confirm() throws Throwable {
 
-	/*	Got_Button.click();
-		Thread.sleep(1000);*/
+		/*
+		 * Got_Button.click(); Thread.sleep(1000);
+		 */
 
 		Confirm_Book_Car.click();
 		Thread.sleep(4000);
-		
-	
-		
-		
-		
+
 	}
 
 }

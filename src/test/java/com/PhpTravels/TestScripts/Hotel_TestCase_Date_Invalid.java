@@ -11,23 +11,24 @@ import org.testng.annotations.Test;
 import com.PhpTravels.Constants.Browsers;
 import com.PhpTravels.Constants.ExcelLibrary;
 import com.PhpTravels.pom.AHomePage_Object;
-import com.PhpTravels.pom.FlightBooking_Object;
-import com.PhpTravels.pom.FlightConfirm_Object_2;
-import com.PhpTravels.pom.Flightconfirm_Object;
+import com.PhpTravels.pom.Hotel_Final_Booking_1;
+import com.PhpTravels.pom.Hotel_Final_Booking_2;
+import com.PhpTravels.pom.Hotel_Invalid_Date;
 import com.PhpTravels.pom.HotelsFilter_Object;
 import com.PhpTravels.pom.Login_Object;
 import com.PhpTravels.pom.MyAccount_Object;
 
-public class Flight_TestCase {
+public class Hotel_TestCase_Date_Invalid {
 
 	WebDriver driver;
 
 	AHomePage_Object homepageobject;
 	Login_Object loginobject;
 	MyAccount_Object myaccountobject;
-	FlightBooking_Object flight;
-	Flightconfirm_Object flightconfirm;
-	FlightConfirm_Object_2 flightconfirm2;
+	HotelsFilter_Object hotelsfilterobject;
+	Hotel_Final_Booking_1 finalbook_1;
+	Hotel_Final_Booking_2 finalbook_2;
+	Hotel_Invalid_Date hotelinvalid;
 
 	ExcelLibrary excelLibrary = new ExcelLibrary();
 
@@ -38,14 +39,16 @@ public class Flight_TestCase {
 		homepageobject = PageFactory.initElements(driver, AHomePage_Object.class);
 		myaccountobject = PageFactory.initElements(driver, MyAccount_Object.class);
 		loginobject = PageFactory.initElements(driver, Login_Object.class);
-		flight = PageFactory.initElements(driver, FlightBooking_Object.class);
-		flightconfirm = PageFactory.initElements(driver, Flightconfirm_Object.class);
-		flightconfirm2= PageFactory.initElements(driver, FlightConfirm_Object_2.class);
+		hotelsfilterobject = PageFactory.initElements(driver, HotelsFilter_Object.class);
+		hotelinvalid= PageFactory.initElements(driver, Hotel_Invalid_Date.class);
+
+		finalbook_1 = PageFactory.initElements(driver, Hotel_Final_Booking_1.class);
+		finalbook_2 = PageFactory.initElements(driver, Hotel_Final_Booking_2.class);
 	}
 
-	@Test(enabled = true)
+	@Test
 
-	public void FLight_Booking() throws Throwable {
+	public void Hotel_Booking() throws Throwable {
 
 		homepageobject.Home_Login();
 		Thread.sleep(2000);
@@ -54,22 +57,26 @@ public class Flight_TestCase {
 		String password = excelLibrary.getExceldata("Hotel_Data", 1, 0);
 
 		loginobject.login_1(username, password);
-		flight.Book_Flight();
+		hotelinvalid.Hotel();
+		hotelsfilterobject.Hotel_Select();
+
 		Thread.sleep(3000);
 
 		Actions action = new Actions(driver);
 
 		action.sendKeys(Keys.PAGE_DOWN).perform();
-		Thread.sleep(2000);
-		
-		flightconfirm.Confirm_Flight();
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+
+		finalbook_1.confirm_hotel_booking_1();
 		Thread.sleep(3000);
 		action.sendKeys(Keys.PAGE_DOWN).perform();
 		Thread.sleep(3000);
-		//flightconfirm2.Confirm_Flight();
+
+	/*	finalbook_2.confirm_hotel_booking_2();
+		action.sendKeys(Keys.PAGE_DOWN).perform();
+		Thread.sleep(3000);*/
 
 	}
-
 
 	@AfterClass(enabled = true)
 	public void close_Browser() {

@@ -64,6 +64,7 @@ public class Tours_TestCase {
 		
         action.sendKeys(Keys.PAGE_DOWN).perform();
         action.sendKeys(Keys.PAGE_DOWN).perform();
+        Thread.sleep(3000);
         
         toursconfirm2.Tours_Confirm_22();
 		

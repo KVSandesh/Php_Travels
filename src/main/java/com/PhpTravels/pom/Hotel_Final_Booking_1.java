@@ -66,22 +66,20 @@ public class Hotel_Final_Booking_1 extends Waits {
 	String Actual_4 = "1";
 
 	public void confirm_hotel_booking_1() throws Throwable {
-		
-		
+
 		System.out.println("\n");
 
 		System.out.println("**********************");
-        System.out.println("********After ReSelecting****");
-        
+		System.out.println("********After ReSelecting****");
 
 		SoftAssert assertion = new SoftAssert();
 		System.out.println("**********************");
 		String expect_1 = Attribute_1.getAttribute("value");
 		System.out.println("After Redefing the Checkindate is :: " + expect_1);
-        assertion.assertEquals(Actual_1, expect_1);
+		assertion.assertEquals(Actual_1, expect_1);
 		Reporter.log(" After Redefing, The checkin Date is True continue booking", true);
 		System.out.println("**********************");
-		
+
 		String expect_2 = Attribute_2.getAttribute("value");
 		System.out.println("Checkinout is ::" + expect_2);
 		assertion.assertEquals(Actual_2, expect_2);
@@ -99,7 +97,9 @@ public class Hotel_Final_Booking_1 extends Waits {
 		assertion.assertEquals(Actual_4, expect_4);
 		Reporter.log("After Redefing, The THe no of Child is true ", true);
 		System.out.println("**********************");
-
+		
+		
+		Thread.sleep(2000);
 		Hotel_Check.click();
 		Thread.sleep(2000);
 

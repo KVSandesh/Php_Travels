@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.PhpTravels.Constants.Waits;
 
-public class AHomePage_Object extends Waits {
+public class Hotel_Invalid_Date extends Waits {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav navbar-right hidden-sm go-left']/child::ul/child::li[1]")
 	public WebElement Add_account;
@@ -104,7 +104,7 @@ public class AHomePage_Object extends Waits {
 
 		checkin.click();
 		Thread.sleep(2000);
-		checkin_Date.click();
+		checkout_Date_Disbaled.click();
 		Thread.sleep(2000);
 
 		// heckout.click();

@@ -3,34 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.PhpTravels.TestScripts.Cars_TestCase">
-        <methods>
-          <include name="close_Browser"/>
-          <include name="openBrowser"/>
-          <include name="Car_Booking"/>
-        </methods>
-      </class> <!-- com.PhpTravels.TestScripts.Cars_TestCase -->
-      <class name="com.PhpTravels.TestScripts.Cars_TestCase_WO_Login">
-        <methods>
-          <include name="openBrowser"/>
-          <include name="close_Browser"/>
-          <include name="Car_Booking_Without_Login"/>
-        </methods>
-      </class> <!-- com.PhpTravels.TestScripts.Cars_TestCase_WO_Login -->
-      <class name="com.PhpTravels.TestScripts.Flight_TestCase">
-        <methods>
-          <include name="close_Browser"/>
-          <include name="FLight_Booking"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- com.PhpTravels.TestScripts.Flight_TestCase -->
-      <class name="com.PhpTravels.TestScripts.Flight_TestCase_WO_Login">
-        <methods>
-          <include name="FLight_Booking_Without_Login"/>
-          <include name="close_Browser"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- com.PhpTravels.TestScripts.Flight_TestCase_WO_Login -->
       <class name="com.PhpTravels.TestScripts.Tours_TestCase_WO_Login">
         <methods>
           <include name="openBrowser"/>
@@ -38,6 +10,27 @@
           <include name="Tours_Booking_Without_Login"/>
         </methods>
       </class> <!-- com.PhpTravels.TestScripts.Tours_TestCase_WO_Login -->
+      <class name="com.PhpTravels.TestScripts.Hotel_TestCase_Date_Invalid">
+        <methods>
+          <include name="Hotel_Booking"/>
+          <include name="openBrowser"/>
+          <include name="close_Browser"/>
+        </methods>
+      </class> <!-- com.PhpTravels.TestScripts.Hotel_TestCase_Date_Invalid -->
+      <class name="com.PhpTravels.TestScripts.Cars_TestCase_WO_Login">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="close_Browser"/>
+          <include name="Car_Booking_Without_Login"/>
+        </methods>
+      </class> <!-- com.PhpTravels.TestScripts.Cars_TestCase_WO_Login -->
+      <class name="com.PhpTravels.TestScripts.Flight_TestCase_WO_Login">
+        <methods>
+          <include name="FLight_Booking_Without_Login"/>
+          <include name="close_Browser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- com.PhpTravels.TestScripts.Flight_TestCase_WO_Login -->
       <class name="com.PhpTravels.TestScripts.SIgn_Up_Negative">
         <methods>
           <include name="close_Browser"/>

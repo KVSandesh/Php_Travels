@@ -145,15 +145,7 @@ public class Flightconfirm_Object {
 		Book_FLight.click();
 		Thread.sleep(3000);
 		
-		
-	/*	Got_Button.click();
-		Thread.sleep(2000);*/
 
-		COnfirm_Book_FLight.click();
-		
-		
-		Thread.sleep(4000);
-       
 
 	}
 
